@@ -1,0 +1,33 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #1a1a1a;
+    color: white;
+}
+
+header {
+    background: #ff4500;
+    padding: 20px;
+}
+
+#produk-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.produk {
+    background: #333;
+    padding: 15px;
+    margin: 10px;
+    border-radius: 5px;
+    width: 250px;
+}
+
+button {
+    background: #ff4500;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+}
