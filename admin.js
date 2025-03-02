@@ -19,7 +19,7 @@ async function tambahProduk() {
     await fetch(`https://api.github.com/repos/kenz-developer/web-store/contents/produk.json`, {
         method: "PUT",
         headers: {
-            "Authorization": "token GITHUB_TOKEN",
+            "Authorization": "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",
             "Content-Type": "application/json"
         },
         body: JSON.stringify({
