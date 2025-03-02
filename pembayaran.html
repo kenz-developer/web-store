@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pembayaran - Kenz Store</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body>
+
+    <header>
+        <h1>Pembayaran</h1>
+        <p>Lengkapi data pembayaran</p>
+    </header>
+
+    <main>
+        <label>Nama:</label>
+        <input type="text" id="nama" placeholder="Masukkan nama" required>
+
+        <label>Produk:</label>
+        <input type="text" id="produk" readonly>
+
+        <label>Harga:</label>
+        <input type="text" id="harga" readonly>
+
+        <button onclick="prosesPembayaran()">Bayar Sekarang</button>
+    </main>
+
+    <script>
+        const params = new URLSearchParams(window.location.search);
+        document.getElementById('produk').value = params.get('produk');
+        document.getElementById('harga').value = params.get('harga');
+
+        function prosesPembayaran() {
+            let nama = document.getElementById('nama').value;
+            let produk = document.getElementById('produk').value;
+            let harga = document.getElementById('harga').value;
+
+            if (!nama) {
+                Swal.fire("Error", "Nama tidak boleh kosong!", "error");
+                return;
+            }
+
+            let pesan = `Halo, saya ingin membeli ${produk} dengan harga ${harga}. Nama saya ${nama}.`;
+            let whatsappLink = `https://wa.me/6288215523477?text=${encodeURIComponent(pesan)}`;
+
+            Swal.fire({
+                title: "Konfirmasi Pembayaran",
+                text: `Bayar ${harga} IDR untuk ${produk}?`,
+                icon: "info",
+                showCancelButton: true,
+                confirmButtonText: "Bayar via WhatsApp"
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    window.location.href = whatsappLink;
+                }
+            });
+        }
+    </script>
+
+</body>
+</html>
