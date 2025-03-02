@@ -28,7 +28,9 @@ p {
 .form-group {
     margin-bottom: 15px;
     text-align: left;
-}und: #222;
+}
+
+und: #222;
     color: white;
     text-align: center;
 }
@@ -89,6 +91,7 @@ input {
 
 header {
     background: #444;
+    border-radius: 5px;
     padding: 20px;
 }
 
