@@ -1,12 +1,27 @@
 [
     {
-        "nama": "Hosting 1GB",
-        "deskripsi": "Hosting murah 1GB dengan fitur premium",
-        "harga": 10000
+        "nama": "VPS R1C1",
+        "deskripsi": "VPS Digital Ocean Cocok untuk bot wa",
+        "harga": 20000
     },
+    {
+        "nama": "VPS R2C2", 
+        "deskripsi": "VPS Digital Ocean Fast Cocok untuk bot wa", 
+        "harga": 25000
+    },
+    {
+        "nama": "VPS R4C2", 
+        "deskripsi": "VPS Digital Ocean Cocok untuk web dan bot wa", 
+        "harga": 30000
+    }, 
     {
         "nama": "Domain .my.id",
         "deskripsi": "Domain murah dengan ekstensi .my.id",
+        "harga": 15000
+    }, 
+    {
+        "nama": "Domain .biz.id", 
+        "deskripsi ": "Domain murah dengan ini kamu bisa memiliki Domain bagus", 
         "harga": 15000
     }
 ]
