@@ -104,7 +104,7 @@ header {
 
 .product {
     background: #333;
-    box-shadow: 10px solid cyan;
+    box-shadow: 0 0 10px cyan;
     padding: 15px;
     margin: 10px;
     border-radius: 5px;
