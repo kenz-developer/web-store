@@ -1,1 +1,12 @@
-[]
+[
+    {
+        "nama": "Hosting 1GB",
+        "deskripsi": "Hosting murah 1GB dengan fitur premium",
+        "harga": 10000
+    },
+    {
+        "nama": "Domain .my.id",
+        "deskripsi": "Domain murah dengan ekstensi .my.id",
+        "harga": 15000
+    }
+]
