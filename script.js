@@ -1,32 +1,30 @@
-document.addEventListener("DOMContentLoaded", async function() {
-    let response = await fetch("https://raw.githubusercontent.com/USERNAME/REPO/main/produk.json");
-    let produk = await response.json();
-
-    let container = document.getElementById("produk-list");
-    produk.forEach(item => {
-        let div = document.createElement("div");
-        div.className = "produk";
-        div.innerHTML = `
-            <h3>${item.nama}</h3>
-            <p>${item.deskripsi}</p>
-            <strong>Rp ${item.harga.toLocaleString()}</strong>
-            <button onclick="beli(${item.id})">Beli</button>
-        `;
-        container.appendChild(div);
+fetch('produk.json')
+    .then(response => response.json())
+    .then(products => {
+        let container = document.getElementById('product-list');
+        products.forEach(product => {
+            let item = document.createElement('div');
+            item.classList.add('product');
+            item.innerHTML = `
+                <h3>${product.nama}</h3>
+                <p>${product.deskripsi}</p>
+                <p>Harga: ${product.harga} IDR</p>
+                <button onclick="beliProduk('${product.nama}', '${product.harga}')">Beli</button>
+            `;
+            container.appendChild(item);
+        });
     });
-});
 
-function beli(id) {
+function beliProduk(nama, harga) {
     Swal.fire({
-        title: "Konfirmasi",
-        text: "Anda yakin ingin membeli produk ini?",
-        icon: "question",
+        title: `Beli ${nama}?`,
+        text: `Harga: ${harga} IDR`,
+        icon: 'question',
         showCancelButton: true,
-        confirmButtonText: "Ya, beli!",
-        cancelButtonText: "Batal"
-    }).then((result) => {
+        confirmButtonText: 'Beli Sekarang',
+    }).then(result => {
         if (result.isConfirmed) {
-            window.location.href = `payment.html?id=${id}`;
+            Swal.fire("Pembayaran", `Silakan bayar ${harga} ke rekening Kenz`, "success");
         }
     });
 }
