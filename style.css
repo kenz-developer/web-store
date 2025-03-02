@@ -1,33 +1,33 @@
 body {
     font-family: Arial, sans-serif;
-    text-align: center;
-    background-color: #1a1a1a;
+    background: #222;
     color: white;
+    text-align: center;
 }
 
 header {
-    background: #ff4500;
+    background: #444;
     padding: 20px;
 }
 
-#produk-list {
+#product-list {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    margin-top: 20px;
 }
 
-.produk {
+.product {
     background: #333;
     padding: 15px;
     margin: 10px;
     border-radius: 5px;
-    width: 250px;
+    width: 200px;
 }
 
 button {
-    background: #ff4500;
-    color: white;
-    padding: 10px;
+    background: #ff9800;
     border: none;
+    padding: 10px;
     cursor: pointer;
 }
