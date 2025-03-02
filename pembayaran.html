@@ -9,23 +9,27 @@
 </head>
 <body>
 
-    <header>
+    <div class="container">
         <h1>Pembayaran</h1>
         <p>Lengkapi data pembayaran</p>
-    </header>
 
-    <main>
-        <label>Nama:</label>
-        <input type="text" id="nama" placeholder="Masukkan nama" required>
+        <div class="form-group">
+            <label for="nama">Nama:</label>
+            <input type="text" id="nama" placeholder="Masukkan nama" required>
+        </div>
 
-        <label>Produk:</label>
-        <input type="text" id="produk" readonly>
+        <div class="form-group">
+            <label for="produk">Produk:</label>
+            <input type="text" id="produk" readonly>
+        </div>
 
-        <label>Harga:</label>
-        <input type="text" id="harga" readonly>
+        <div class="form-group">
+            <label for="harga">Harga:</label>
+            <input type="text" id="harga" readonly>
+        </div>
 
-        <button onclick="prosesPembayaran()">Bayar Sekarang</button>
-    </main>
+        <button class="btn-bayar" onclick="prosesPembayaran()">Bayar Sekarang</button>
+    </div>
 
     <script>
         const params = new URLSearchParams(window.location.search);
@@ -43,7 +47,7 @@
             }
 
             let pesan = `Halo, saya ingin membeli ${produk} dengan harga ${harga}. Nama saya ${nama}.`;
-            let whatsappLink = `https://wa.me/6288215523477?text=${encodeURIComponent(pesan)}`;
+            let whatsappLink = `https://wa.me/6285934686607?text=${encodeURIComponent(pesan)}`;
 
             Swal.fire({
                 title: "Konfirmasi Pembayaran",
