@@ -110,6 +110,7 @@ header {
 button {
     background: #ff9800;
     border: none;
+    width: 100%;
     border-radius: 5px;
     padding: 10px;
     cursor: pointer;
