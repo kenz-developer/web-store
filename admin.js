@@ -8,7 +8,7 @@ async function tambahProduk() {
         return;
     }
 
-    let response = await fetch("https://raw.githubusercontent.com/USERNAME/REPO/main/produk.json");
+    let response = await fetch("https://raw.githubusercontent.com/kenz-developer/web-store/main/produk.json");
     let produk = await response.json();
 
     let idBaru = produk.length + 1;
@@ -16,7 +16,7 @@ async function tambahProduk() {
 
     produk.push(newProduct);
 
-    await fetch(`https://api.github.com/repos/USERNAME/REPO/contents/produk.json`, {
+    await fetch(`https://api.github.com/repos/kenz-developer/web-store/contents/produk.json`, {
         method: "PUT",
         headers: {
             "Authorization": "token GITHUB_TOKEN",
